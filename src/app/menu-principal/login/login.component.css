@@ -1,0 +1,33 @@
+.button{
+    padding-top: 1rem;
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     flex: wrap;
+ 
+ }
+ .btn{
+     width: 8rem;
+ }
+ h2{
+     color:dodgerblue
+ }
+ .container-sm{
+     align-items: center;
+     justify-content: center;
+     display: flex;
+     flex: wrap;
+ }
+ form{
+     width: 30rem;
+     padding: 2rem;
+ }
+ .form-group{
+     padding-bottom: 1rem;
+ }
+ .btn:hover{
+     background-color: green;
+ }
+ .error{
+    color: red;
+ }

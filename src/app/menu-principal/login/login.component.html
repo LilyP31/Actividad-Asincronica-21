@@ -1,0 +1,31 @@
+<section class="container-sm p-3">
+    <section class="border border-2 bg-light">
+        <form [formGroup]="loginForm">
+        <h2 class="m-2">Iniciar sesion</h2>
+        <section class="login m-2">
+            <section class="form-group">  
+            <label for="username">Username:</label>
+            <input type="text" maxlength="8" class="form-control"  formControlName="username">
+            <div *ngIf="username?.touched && username?.invalid" class="alert alert-danger">
+            <div *ngIf="username?.errors?.['required']">
+                El nombre de usuario es requerido
+              </div>
+            </div>  
+        </section>
+        <section class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" maxlength="8" class="form-control"  formControlName="password">
+            <div *ngIf="password?.touched && password?.invalid" class="alert alert-danger">
+                <div *ngIf="password?.errors?.['required']">
+                  La contraseña debe tener al menos 8 caracteres
+                </div>
+            </div>
+        <section class="button">
+            
+            <input class="btn btn-primary" (click)="login()" value="Log in" [disabled]="!botonDeshabilitado">
+        </section>
+        <section class="p-2">
+            <div *ngIf="mostrar" class="error alert alert-danger">Usuario o contraseña incorrectos</div>
+        </section>
+    </section>
+</section>
